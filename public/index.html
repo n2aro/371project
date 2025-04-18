@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PantryPal Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <img src="logo.png" alt="PantryPal Logo" class="logo">
+    <h1>PantryPal</h1>
+    <form id="loginForm">
+      <div class="input-group">
+        <input type="text" id="emailOrPhone" name="emailOrPhone" placeholder="Email or Phone" required>
+        <span class="icon">👤</span>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <span class="icon">🔒</span>
+      </div>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+      <button type="submit" class="sign-in-btn">Sign in</button>
+    </form>
+    <div class="divider">or</div>
+    <button class="create-account-btn">Create Account</button>
+  </div>
+  <script src="app.js"></script>
+</body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</html>
