@@ -1,3 +1,4 @@
+/* Login Page Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #fdf5e6;
@@ -90,7 +91,7 @@ h1 {
 .create-account-btn {
   width: 100%;
   padding: 12px;
-  background-color: #cf0075;
+  background-color: #cf006b;
   color: white;
   border: none;
   border-radius: 8px;
@@ -99,6 +100,102 @@ h1 {
 }
 
 .create-account-btn:hover {
-  background-color: #cf0075;
+  background-color: #aa004f;
 }
 
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf5e6;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login and Create Account Container */
+.login-container,
+.create-account-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ff3366;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 40px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-group .icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+
+/* Terms and Privacy */
+.terms {
+  margin: 15px 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Buttons */
+.sign-in-btn,
+.sign-up-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sign-in-btn:hover,
+.sign-up-btn:hover {
+  background-color: #e62e5c;
+}
+
+/* Divider */
+.divider {
+  margin: 15px 0;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Links */
+a {
+  color: #ff3366;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

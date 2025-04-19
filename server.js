@@ -1,3 +1,4 @@
+// Login Endpoint
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
@@ -30,4 +31,16 @@ app.post('/login', (req, res) => {
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
+});
+
+// Create Account Endpoint
+app.post('/create-account', (req, res) => {
+  const { fullName, email, username, password } = req.body;
+
+  if (users[username]) {
+    return res.status(400).send({ message: 'Username already exists.' });
+  }
+
+  users[username] = bcrypt.hashSync(password, 10);
+  res.status(201).send({ message: 'Account created successfully!' });
 });
