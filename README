@@ -1,0 +1,96 @@
+/ ABOUT / 
+PantryPal Login and Create Account System
+This project is a simple web application that provides 
+a login and account creation system. It is built using Node.js, Express, 
+and HTML/CSS/JavaScript for the frontend. The application allows users 
+to log in or create an account with a user-friendly interface.
+
+/ FEATURES /
+
+Login Page:
+-Users can log in using their email or phone number and password.
+-Displays error messages for invalid credentials.
+
+Create Account Page:
+-Users can create a new account by providing their full name, email, username, and password.
+-Includes a checkbox for agreeing to terms and privacy.
+
+Responsive Design:
+-Both pages are styled to look clean and professional.
+-Fully responsive for different screen sizes.
+
+/ TECHNOLOGIES USED /
+
+backend:
+-Node.js
+-Express.js
+-bcrypt (for password hashing)
+
+Fronted:
+-HTML
+-CSS
+-JavaScript
+
+Other Tools:
+-Body-parser (for parsing JSON requests)
+
+/ SETUP IMSTRUCTIONS /
+1. Clone the Repository:
+
+git clone <repository-url>
+cd 371project
+
+2. Install Dependencies
+Run the following command to install 
+the required Node.js modules:
+
+npm install
+
+The server will start.
+
+
+/ PROJECT STRUCTURE /
+
+371project/
+│
+├── public/
+│   ├── index.html          # Login page
+│   ├── create-account.html # Create account page
+│   ├── styles.css          # CSS for styling
+│   ├── app.js              # Frontend JavaScript
+│
+├── server.js               # Backend server code
+├── package.json            # Node.js dependencies
+├── package-lock.json       # Dependency lock file
+└── README.md               # Project documentation
+
+/ HOW TO USE /
+
+Login Page:
+1.Open http://localhost:3000 in your browser.
+2.Enter your email or phone number and password.
+3.Click Sign In to log in.
+
+Create Account Page
+1.Click the Create Account button on the login page.
+2.Fill in the form with your details.
+3.Click Sign Up to create a new account.
+
+/ ENDPOINTS /
+
+POST /login:
+-Validates user credentials and returns a success or error message.
+
+POST /create-account:
+-Creates a new user account and stores the hashed password.
+
+/ FEATURE ENHANCEMENTS /
+
+-Add a database (e.g., MongoDB) to store user data persistently.
+-Implement password recovery functionality.
+-Add email verification for account creation.
+
+/ LICENSE /
+
+This project is licensed under the MIT License.
+
