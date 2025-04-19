@@ -6,8 +6,8 @@ const PORT = 3000;
 
 // Dummy user data
 const users = {
-  "aisha_cooks@example.com": bcrypt.hashSync("password123", 10),
-  "danalx@example.com": bcrypt.hashSync("1234", 10),
+  "aisha_cooks@gmail.com": bcrypt.hashSync("1234", 10),
+  "99952134": bcrypt.hashSync("1234", 10),
 };
 
 // Middleware
