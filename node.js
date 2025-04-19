@@ -1,12 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const bcrypt = require('bcrypt');
 const app = express();
 const PORT = 3000;
 
 // Dummy user data
 const users = {
-  "aisha_cooks@example.com": "password123",
-  "danalx@example.com": "1234",
+  "aisha_cooks@example.com": bcrypt.hashSync("password123", 10),
+  "danalx@example.com": bcrypt.hashSync("1234", 10),
 };
 
 // Middleware
@@ -17,7 +18,7 @@ app.use(express.static('public')); // Serve static files (e.g., HTML, CSS, JS)
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
 
-  if (users[username] && users[username] === password) {
+  if (users[username] && bcrypt.compareSync(password, users[username])) {
     res.status(200).send({ message: 'Login successful!' });
   } else {
     res.status(401).send({ message: 'Invalid username or password.' });
