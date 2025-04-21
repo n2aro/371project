@@ -25,6 +25,18 @@ app.post('/login', (req, res) => {
   }
 });
 
+// Create Account endpoint
+app.post('/create-account', (req, res) => {
+  const { username, password } = req.body;
+
+  if (users[username]) {
+    return res.status(400).send({ message: 'User already exists.' });
+  }
+
+  users[username] = bcrypt.hashSync(password, 10);
+  res.status(201).send({ message: 'Account created successfully!' });
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

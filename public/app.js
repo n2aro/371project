@@ -1,4 +1,6 @@
-// Handle login Form Submission
+// filepath: c:\Users\plcsp\OneDrive - Kuwait University\سطح المكتب\371project\public\app.js
+
+// Handle login form submission
 document.getElementById('loginForm').addEventListener('submit', async function (event) {
   event.preventDefault();
 
@@ -15,9 +17,9 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     const result = await response.json();
 
     if (response.ok) {
-      alert(result.message); // Login successful
+      alert(result.message); // Show success message
     } else {
-      alert(result.message); // Invalid credentials
+      alert(result.message); // Show error message
     }
   } catch (error) {
     console.error('Error:', error);
@@ -25,7 +27,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
   }
 });
 
-// Handle Create Account Form Submission
+// Handle create account form submission
 document.getElementById('createAccountForm')?.addEventListener('submit', async function (event) {
   event.preventDefault();
 
@@ -44,10 +46,10 @@ document.getElementById('createAccountForm')?.addEventListener('submit', async f
     const result = await response.json();
 
     if (response.ok) {
-      alert(result.message); // Account created successfully
+      alert(result.message); // Show success message
       window.location.href = 'index.html'; // Redirect to login page
     } else {
-      alert(result.message); // Error creating account
+      alert(result.message); // Show error message
     }
   } catch (error) {
     console.error('Error:', error);
