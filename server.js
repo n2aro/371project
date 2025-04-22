@@ -32,18 +32,24 @@ app.post('/login', (req, res) => {
 
 // Create Account Endpoint
 app.post('/create-account', (req, res) => {
-  const { fullName, email, username, password } = req.body;
+    const { fullName, email, username, password } = req.body;
+  
+    if (users[username]) {
+      return res.status(400).send({ message: 'User already exists.' });
+    }
+  
+    // Add the new user to the dummy users object
+    users[username] = bcrypt.hashSync(password, 10);
+  
+    // Log the updated users object for debugging
+    console.log('Updated users:', users);
+  
+    // Send success response
+    res.status(201).send({ message: 'Account created successfully!' });
+    
+  });
 
-  if (users[username]) {
-    return res.status(400).send({ message: 'User already exists.' });
-  }
-
-  // Add the new user to the dummy users object
-  users[username] = bcrypt.hashSync(password, 10);
-
-  // Log the updated users object for debugging
-  console.log('Updated users:', users);
-
-  // Send success response
-  res.status(201).send({ message: 'Account created successfully!' });
-});
+  // Start the server and log the URL
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });

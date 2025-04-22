@@ -1,43 +1,48 @@
-/ ABOUT / 
+/ **ABOUT** / 
 PantryPal Login and Create Account System
 This project is a simple web application that provides 
 a login and account creation system. It is built using Node.js, Express, 
 and HTML/CSS/JavaScript for the frontend. The application allows users 
 to log in or create an account with a user-friendly interface.
 
-/ FEATURES /
+/ **FEATURES** /
 
-Login Page:
+**Login Page**:
 -Users can log in using their email or phone number and password.
 -Displays error messages for invalid credentials.
 
-Create Account Page:
+**Create Account Page**:
 -Users can create a new account by providing their full name, email, username, and password.
 -Includes a checkbox for agreeing to terms and privacy.
 
-Responsive Design:
+**Dashboard**: 
+Displays user-specific data, such as macros and actions, with a personalized welcome message.
+
+
+**Responsive Design**:
 -Both pages are styled to look clean and professional.
 -Fully responsive for different screen sizes.
 
-/ TECHNOLOGIES USED /
+/ **TECHNOLOGIES USED** /
 
-backend:
+**backend:**
 -Node.js
 -Express.js
 -bcrypt (for password hashing)
 
-Fronted:
+**Fronted:**
 -HTML
 -CSS
 -JavaScript
 
-Other Tools:
+**Other Tools:**
 -Body-parser (for parsing JSON requests)
 
-/ SETUP IMSTRUCTIONS /
+/ **SETUP IMSTRUCTIONS** /
+
 1. Clone the Repository:
 
-git clone <repository-url>
+git clone <https://github.com/n2aro/371project>
 cd 371project
 
 2. Install Dependencies
@@ -49,13 +54,14 @@ npm install
 The server will start.
 
 
-/ PROJECT STRUCTURE /
+/ **PROJECT STRUCTURE** /
 
 371project/
 │
 ├── public/
 │   ├── index.html          # Login page
 │   ├── create-account.html # Create account page
+│   ├── dashboard.html      # dashboard page
 │   ├── styles.css          # CSS for styling
 │   ├── app.js              # Frontend JavaScript
 │
@@ -64,19 +70,26 @@ The server will start.
 ├── package-lock.json       # Dependency lock file
 └── README.md               # Project documentation
 
-/ HOW TO USE /
+/ **HOW TO USE** /
 
-Login Page:
+**Login Page:**
 1.Open http://localhost:3000 in your browser.
 2.Enter your email or phone number and password.
 3.Click Sign In to log in.
 
-Create Account Page
+**Create Account Page**
 1.Click the Create Account button on the login page.
 2.Fill in the form with your details.
 3.Click Sign Up to create a new account.
 
-/ ENDPOINTS /
+**Dashboard:**
+1.After logging in, you will be redirected to http://localhost:3000/dashboard.html.
+2.The dashboard displays:
+-A welcome message with your username.
+-Records (Net Carbs, Fat, Protein).
+-Action buttons for "Smart Suggestions," "Direct Messages," "Explore Services," and "Community Connect."
+
+/ **ENDPOINTS** /
 
 POST /login:
 -Validates user credentials and returns a success or error message.
@@ -84,13 +97,13 @@ POST /login:
 POST /create-account:
 -Creates a new user account and stores the hashed password.
 
-/ FEATURE ENHANCEMENTS /
+/ **FEATURE ENHANCEMENTS** /
 
 -Add a database (e.g., MongoDB) to store user data persistently.
 -Implement password recovery functionality.
 -Add email verification for account creation.
 
-/ LICENSE /
+/ **LICENSE** /
 
 This project is licensed under the MIT License.
 
