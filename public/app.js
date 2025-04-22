@@ -107,3 +107,31 @@ if (window.location.pathname.endsWith('dashboard.html')) {
     window.location.href = 'index.html';
   }
 }
+
+let currentMeal = '';
+
+function openLogModal(meal) {
+  currentMeal = meal;
+  document.getElementById('meal-type').textContent = meal.charAt(0).toUpperCase() + meal.slice(1);
+  document.getElementById('log-modal').classList.remove('hidden');
+}
+
+function closeLogModal() {
+  document.getElementById('log-modal').classList.add('hidden');
+}
+
+function addToLog() {
+  const foodItem = document.getElementById('food-item').value;
+  const calories = parseInt(document.getElementById('calories').value, 10);
+
+  if (!foodItem || isNaN(calories)) {
+    alert('Please enter valid food and calorie values.');
+    return;
+  }
+
+  const calorieSpan = document.getElementById(`${currentMeal}-calories`);
+  const currentCalories = parseInt(calorieSpan.textContent, 10);
+  calorieSpan.textContent = currentCalories + calories;
+
+  closeLogModal();
+}

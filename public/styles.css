@@ -211,6 +211,28 @@ a:hover {
   text-align: center;
 }
 
+/* Top-right button styles */
+header {
+  position: relative; /* Ensure the button is positioned relative to the header */
+}
+
+header .redirect-btn {
+  position: absolute;
+  top: 10px; /* Adjust the vertical position */
+  right: 10px; /* Adjust the horizontal position */
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+header .redirect-btn:hover {
+  background-color: #e62e5c;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -318,4 +340,332 @@ header h1 {
 
 .action-btn:hover {
   background-color: #e62e5c;
+}
+
+/* Redirect Button Styles */
+.redirect-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.redirect-btn {
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.redirect-btn:hover {
+  background-color: #e62e5c;
+}
+
+/* Services Page Styles */
+.services-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #ff3366;
+  margin-bottom: 20px;
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* General Service Item Styles */
+.service-item {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.service-item h2 {
+  font-size: 18px;
+  color: #008000;
+  margin-bottom: 5px;
+}
+
+.service-item p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Calories Intake Section */
+.calorie-intake {
+  background-color: #ffe6e6;
+  border: 1px solid #ff3366;
+  text-align: center;
+}
+
+/* Small Button Style */
+.small-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.small-btn:hover {
+  background-color: #e62e5c;
+}
+
+/* Calorie Intake Page Styles */
+.calorie-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #ff3366;
+}
+
+header p {
+  font-size: 16px;
+  color: #333;
+}
+
+.calorie-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+
+/* Subtitle under Calorie Intake */
+.subtitle {
+  font-size: 16px;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Circle Styles */
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #ff3366; /* Match the header color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  color: #fff; /* Ensure text is visible on the new background */
+}
+
+.circle h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.circle p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Log Meals Region */
+.log-meals-region {
+  background-color: #ff3366; /* Match the header color */
+  border: 1px solid #ff3366; /* Match the header color */
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff; /* Ensure text is visible on the new background */
+}
+
+.log-meals .meal-item {
+  background-color: #fff; /* Keep individual meal items white for contrast */
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.meal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.add-btn {
+  background-color: #ff3366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #e62e5c;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #e6f4ea;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  font-size: 18px;
+  color: #008000;
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.add-log-btn {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-log-btn:hover {
+  background-color: #006400;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #008000;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* Modal Content for Log Meal Page */
+/* Modal Content for Log Meal Page */
+.modal-content {
+  background-color: #e6f4ea; /* Light green background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  margin: 100px auto; /* Center the region vertically */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  font-size: 18px;
+  color: #008000; /* Green text */
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
+  background-color: #fff; /* Set background color to white */
+}
+
+.add-log-btn {
+  background-color: #008000; /* Green button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-log-btn:hover {
+  background-color: #006400; /* Darker green on hover */
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #008000;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }

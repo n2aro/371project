@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie Intake</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calorie-container">
+    <header>
+      <h1>Calorie Intake</h1>
+      <p>Let's track your meals to reach your goals!</p>
+    </header>
+    <div class="calorie-summary">
+      <div class="circle">
+        <h2>1,500</h2>
+        <p>Remaining</p>
+      </div>
+      <div class="details">
+        <p>Food: 0 Kcal</p>
+        <p>Exercise: 0 Kcal</p>
+        <p>Base Goal: 1,500 Kcal</p>
+      </div>
+    </div>
+    <div class="log-meals">
+      <h2>Log Meals</h2>
+                <div class="meal-item">
+          <p>Breakfast: <span id="breakfast-calories">0</span> kcal</p>
+          <p>Target: 320-400 kcal</p>
+          <button class="add-btn" onclick="window.location.href='log-meal.html?meal=breakfast'">+</button>
+        </div>
+        <div class="meal-item">
+          <p>Lunch: <span id="lunch-calories">0</span> kcal</p>
+          <p>Target: 480-560 kcal</p>
+          <button class="add-btn" onclick="window.location.href='log-meal.html?meal=lunch'">+</button>
+        </div>
+        <div class="meal-item">
+          <p>Dinner: <span id="dinner-calories">0</span> kcal</p>
+          <p>Target: 400-560 kcal</p>
+          <button class="add-btn" onclick="window.location.href='log-meal.html?meal=dinner'">+</button>
+        </div>
+        <div class="meal-item">
+          <p>Snack: <span id="snack-calories">0</span> kcal</p>
+          <p>Target: 160-240 kcal</p>
+          <button class="add-btn" onclick="window.location.href='log-meal.html?meal=snack'">+</button>
+        </div>
+    <div class="meal-item">
+      <p>Snack: <span id="snack-calories">0</span> kcal</p>
+      <p>Target: 160-240 kcal</p>
+      <button class="add-btn" onclick="openLogModal('snack')">+</button>
+    </div>
+    </div>
+   <div id="log-modal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeLogModal()">←</button>
+    <h2>Log Your <span id="meal-type">Meal</span></h2>
+    <label for="food-item">Food Item:</label>
+    <input type="text" id="food-item" placeholder="Enter food name">
+    <label for="calories">Calories:</label>
+    <input type="number" id="calories" value="0">
+    <button class="add-log-btn" onclick="addToLog()">Add to Log</button>
+  </div>
+</div>
+    <footer>
+      <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
